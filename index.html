@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1221">
+  <meta name="description" content="TradeX AI: an educational preview of a fictional market chart and paper-trading platform. No real financial prices or payments.">
+  <title>TradeX AI — Public Demo Preview</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> PUBLIC PRODUCT PREVIEW <span class="sep">•</span> All companies, prices and trades shown here are fictional <span class="sep">•</span> No payments accepted</div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="TradeX AI home"><span class="brandmark">T<span>↗</span></span><strong>TRADEX <em>AI</em></strong></a>
+    <nav aria-label="Main navigation"><a href="#terminal">Demo terminal</a><a href="#pricing">Membership</a><a href="#about">About</a></nav>
+    <a class="outline small" href="#terminal">Explore demo <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="intro" id="home">
+      <div><div class="eyebrow"><span class="eyedot"></span> EDUCATIONAL TRADING PLATFORM</div>
+        <h1>Learn the markets.<br><span>Practice with confidence.</span></h1>
+        <p>Explore TradeX AI through a safe, fictional-market preview. View interactive charts and experience how virtual portfolio tools could work, without risking real money.</p>
+        <div class="hero-actions"><a class="primary" href="#terminal">Explore the terminal <span aria-hidden="true">→</span></a><a class="outline" href="#pricing">See membership plans</a></div>
+        <div class="hero-foot"><span>✧ No deposit required</span><span>✧ Fictional practice data</span><span>✧ Made for learning</span></div>
+      </div>
+      <div class="feature-card"><div class="feature-heading"><span>TRADEX PREVIEW</span><span class="tag">SAMPLE SESSION</span></div>
+        <div class="feature-value" id="hero-price">₹—</div><div class="feature-sub">Illustrative quote • Not an actual listed stock</div>
+        <div class="spark" id="hero-spark" aria-hidden="true"></div><div class="feature-bottom"><span>Simulated session</span><strong>09:15 – 15:30 IST</strong></div>
+      </div>
+    </section>
+    <section class="terminal section" id="terminal">
+      <div class="section-head"><div><div class="eyebrow">PRODUCT WALKTHROUGH</div><h2>TradeX trading terminal</h2><p>Try the chart in Free view, then switch to the public Pro feature preview to explore sample trades.</p></div><span class="sample-label">SYNTHETIC DATA • NOT LIVE NSE/BSE</span></div>
+      <div class="workspace">
+        <aside class="sidebar card" aria-label="Fictional sample stocks">
+          <div class="aside-label">SAMPLE WATCHLIST</div>
+          <div id="symbol-list" class="symbol-list" role="group" aria-label="Select fictional symbol"></div>
+          <div class="aside-info"><strong>Why fictional stocks?</strong><br>This version is safe to show publicly before we arrange the necessary commercial market-data permissions.</div>
+        </aside>
+        <div class="main-panel">
+          <div class="panel card">
+            <div class="panel-head"><div><div class="symbol-name" id="symbol-name">Demo asset</div><div class="subtle" id="symbol-code">DEMO-A • Example instrument</div></div><div class="quote"><strong id="last-price">₹—</strong><span id="sample-change">Simulated</span></div></div>
+            <div class="toolbar"><div class="seg" aria-label="Chart timeframe"><button type="button" class="interval active" data-interval="5">5m</button><button type="button" class="interval" data-interval="15">15m</button><button type="button" class="interval" data-interval="30">30m</button></div><div class="chart-state"><span class="green-dot"></span> Example session • IST</div></div>
+            <div class="chart-wrap"><canvas id="chart" role="img" aria-label="Generated fictional price candlestick chart"></canvas><div class="tooltip" id="chart-tip" hidden></div></div>
+            <div class="chart-foot"><span>09:15 IST</span><span>Sample trading session</span><span>15:30 IST</span></div>
+            <div class="indicator-line" id="indicator-line">Indicators: Sample Pro preview only.</div>
+          </div>
+          <div class="bottom-grid">
+            <div class="card trade-card"><div class="card-title"><strong>Virtual trading</strong><span id="access-label" class="pill">FREE • VIEW ONLY</span></div>
+              <p id="access-message" class="subtle">Buy and Sell are locked on Free. Select the sample Pro preview to try the interface.</p>
+              <div class="plan-toggle"><button type="button" class="toggle-on" id="free-button">Free view</button><button type="button" id="pro-button">Try sample Pro</button></div>
+              <label for="quantity">Sample quantity</label><input id="quantity" type="number" min="1" max="100000" step="1" value="1" inputmode="numeric">
+              <div class="trade-buttons"><button type="button" class="buy" id="buy-button" disabled>Virtual Buy</button><button type="button" class="sell" id="sell-button" disabled>Virtual Sell</button></div>
+              <p class="note" id="trade-status" role="status" aria-live="polite">Preview only. No financial transactions.</p>
+            </div>
+            <div class="card portfolio-card"><div class="card-title"><strong>Sample portfolio</strong><span class="pill dim">THIS BROWSER ONLY</span></div><div class="balance-caption">Virtual cash</div><div class="balance" id="wallet">₹1,00,000.00</div><div class="stats"><div><small>Portfolio invested</small><strong id="invested">₹0.00</strong></div><div><small>Sample equity</small><strong id="equity">₹1,00,000.00</strong></div></div><div class="holdings"><div class="subtle smallcap">SAMPLE HOLDINGS</div><div id="positions" class="positions">No sample trades yet.</div></div><button type="button" id="reset-button" class="subtle-action" disabled>Reset sample portfolio</button></div>
+          </div>
+          <div class="card history-card"><div class="card-title"><strong>Activity</strong><span class="subtle">Illustrative virtual trades only</span></div><div class="history" id="history">Switch to the sample Pro preview and place a virtual trade to see history here.</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="plans section" id="pricing"><div class="center"><div class="eyebrow">MEMBERSHIP</div><h2>Clear plans for every learner</h2><p>These are planned memberships. No paid subscriptions are available in this preview.</p></div><div class="plan-grid">
+      <div class="plan card"><span class="plan-name">TRADEX FREE</span><h3>Start exploring</h3><div class="price">₹0 <span>/month</span></div><ul><li>View fictional market examples</li><li>Chart demonstration</li><li>Read-only portfolio preview</li><li>Learn the basic interface</li></ul><a class="outline plan-action" href="#terminal">Explore Free</a></div>
+      <div class="plan card pro-plan"><div class="plan-tag">PLANNED PREMIUM TIER</div><span class="plan-name">TRADEX PRO</span><h3>Practice more deeply</h3><div class="price">₹999 <span>/month (proposed)</span></div><ul><li>Everything in Free</li><li>Virtual Buy and Sell functionality</li><li>Portfolio tracking and analytics</li><li>Technical indicators and trade journal</li></ul><a class="primary plan-action" href="#terminal" id="sample-pro-link">Preview Pro features</a><div class="small-print">Preview access is free. No payment is taken, and no subscription is created.</div></div>
+    </div></section>
+    <section class="notice-section section" id="about"><div class="notice-box"><span class="eyebrow">BUILT RESPONSIBLY</span><h2>A demonstration today.<br>A complete platform tomorrow.</h2><p>The public preview runs entirely in your browser and uses fictitious price movements. There are no real-market quotes, financial orders, user accounts or checkout in this version. Your sample trading history is saved only in this browser and can be reset at any time.</p><p>The full subscription service requires secure hosted accounts, persistent storage, validated payment processing, lawful market-data access and appropriate legal review before launch.</p></div></section>
+  </main>
+  <footer><span class="brand"><span class="brandmark">T<span>↗</span></span><strong>TRADEX <em>AI</em></strong></span><span>Fictional educational preview • No real trading • No investment advice</span><span>© TradeX AI</span></footer>
+</body>
+</html>
